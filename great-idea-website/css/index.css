@@ -95,13 +95,19 @@ h1, h2, h3, h4, h5 {
 	border: 1px solid yellow;
 }
 .main-section div{
-	display: inline-block;
+	/* display: inline-block; */
 	border: 1px solid green;
 	width: 40%;
 	height: 100%;
 	
 }
+.main-section .innovation{
+	display: inline-block;
+}
 
+.main-section .img-header{
+	display: inline-block;
+}
 .main-section h1 {
 	border: 1px solid red;
 	font: 200px;

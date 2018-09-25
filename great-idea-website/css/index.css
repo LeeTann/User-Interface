@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,25 +91,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -49,21 +136,54 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+	height: 100%;
+	font-family: 'Indie Flower', cursive;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Bangers', cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
 }
 
 /* Your code starts here! */
+
+.fixed-nav {
+	position: fixed;
+	width: 100%;
+	/* border: 1px solid red; */
+	background: orchid;
+	z-index:100;
+}
+
+.fixed-nav header {
+	position: relative;
+	width: 800px;
+	margin: 20px auto;
+	padding: 20px;
+	/* border: 1px solid green; */
+}
+
+.fixed-nav header .logo {
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	/* border: 1px solid purple; */
+}
+
+.fixed-nav header .main-nav a {
+	padding: 15px;
+}
 
 .container {
 	width: 800px;
@@ -73,51 +193,39 @@ h1, h2, h3, h4, h5 {
 	position: relative;
 }
 
-.container .logo {
-	width: 150px;
-	height: auto;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-}
-
-.container .main-nav{
-	display:inline-block;
-	margin-bottom: 20px;
-}
-
-.container .main-nav a{
-	padding: 25px;
-	}
-
-.main-section div{
-	display: inline-block;
-	width: 49%;
+.main-section {
+	background: url(file:///C:/Users/Lee/User-Interface/great-idea-website/img/header-img.png);
+	width: 50%;
 	height: 100%;
+	margin: 100px auto 30px;
+	padding: 100px;
+	background-repeat: no-repeat;
+	/* border: 1px solid red; */
 }
 
 .main-section .innovation{
-	display: inline-block;
-	height: 100%;
-	width: 50%;
-	font-size: 60px;
+	/* height: 60%; */
 	text-align: center;
+	/* width: 50%; */
+	font-size: 32px;
 	text-transform: uppercase;
-	margin-top: 60px;
-	padding-bottom: 60px;
-	padding-top: 80px;
+	/* margin: auto; */
+	color: orchid;
+	animation: myanimation 2s infinite alternate;
 }
 
-.main-section img{
-	display: inline-block;
-	width: 100%
+@keyframes myanimation {
+	0% {color: orchid}
+	50%{color:dodgerblue}
+	100%{color:goldenrod}
 }
 
 .main-section .innovation button {
 	background-color: white;
 	display: block;
 	margin: auto;
-	margin-top: 60px;
+	margin-top: 110px;
+	margin-bottom: 0;
 	font-size: 24px;
 }
 
@@ -127,7 +235,6 @@ h1, h2, h3, h4, h5 {
 	height: 100%;
 	padding: 10px;
 	margin-bottom: 10px;
-
 }
 
 .middle-img {
@@ -145,12 +252,17 @@ h1, h2, h3, h4, h5 {
 }
 
 hr {
-    display: block;
+	display: block;
 	border-top: 1px solid black;
-	margin: 30px 0;
+	margin: 10px 0 30px;
 }
 
 footer {
 	text-align: center;
 	margin-top: 30px;
+}
+
+address {
+	color: orchid;
+	background: url(file:///C:/Users/Lee/User-Interface/great-idea-website/img/mid-page-accent.jpg);
 }
